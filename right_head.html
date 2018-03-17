@@ -1,0 +1,445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>This is a student chose page</title>
+     <link rel="stylesheet" type="text/css" href="css/stu_style" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body style="padding:10px;margin-left:10px;">
+
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#announcement" data-toggle="tab">announcement</a></li>
+    <li><a href="#choose" data-toggle="tab">Choose course</a></li>
+    <li><a href="#display" data-toggle="tab">Personal information check</a></li>
+    <li><a href="#pay" data-toggle="tab">Pay tuition</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="myTabDrop1" class="dropdown-toggle" >
+        Information inquiry <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#View" tabindex="-1" data-toggle="tab" >View the selected course</a></li>
+        <li><a href="#grade" tabindex="-1" data-toggle="tab">Check grade</a></li>
+        <li class="divider"></li>
+        <li><a href="#">More</a></li>
+      </ul>
+    </li>
+    <li id="exit"><a href="login.html" target="_top"><button type="button" class="btn btn-default" >log out</button></a></li>
+  </ul>
+
+<div id="myTabContent" class="tab-content">
+
+   <div class="tab-pane fade in active" id="announcement">
+	<div class="panel panel-info" style="margin-top:30px;">
+	<div class="panel-body">
+       <table class="table table-hover">
+  <caption></caption>
+  <thead>
+    <tr style="font-size:18px;">
+      <th>Information</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary</a></td>
+      <td>201-02-14</td>
+    </tr>
+     <tr>
+       <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary</a></td>
+      <td>201-02-14</td>
+    </tr>
+     <tr>
+       <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary</a></td>
+      <td>201-02-14</td>
+    </tr>
+     <tr>
+       <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary</a></td>
+      <td>201-02-14</td>
+    </tr>
+    <tr>
+      <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary</a></td>
+      <td>201-02-14</td>
+    </tr>
+    <tr>
+      <td><a href="active.html" target="blank"><span style="font-size:18px;color:red;">Latest News:</span> CAMT Academy held its 15th anniversary jisuanji</a></td>
+      <td>201-02-14</td>
+    </tr>
+  </tbody>
+</table>
+	</div>
+   </div>
+</div>
+
+	<div class="tab-pane fade" id="choose">
+	<table class="table table-bordered" >
+        <div class="btn-group-vertical" style="margin-top:20px;">
+     <div class="form-group">
+	<select class="form-control" id="sel1">
+        <option disabled selected>Choose the school year</option>
+        <option>2017-2018</option>
+        <option>2016-2017</option>
+        <option>2015-2016</option>
+      </select></div>
+	</div>
+   <div class="btn-group-vertical" style="margin-top:20px; margin-left:10px;">
+     <div class="form-group">
+	<select class="form-control" id="sel3">
+        <option>Last semester</option>
+        <option>next semester</option>
+      </select></div>
+	</div>
+        <div class="btn-group-vertical" style="margin-top:20px;margin-left:30px;">
+             <div class="form-group">
+	<select class="form-control" id="sel2">
+        <option disabled selected>Choose Course type</option>
+        <option>Professional required course</option>
+        <option>Professional Elective</option>
+        <option>General Elective Course</option>
+      </select></div>
+	</div>
+
+	<caption style="margin-top:20px">>>Students choose course</caption>
+	<thead>
+		<tr>
+			<th>Course number</th>
+			<th>Course Title</th>
+			<th>Open semester</th>
+			<th>Number of people</th>
+			<th>Teacher number</th>
+            <th>Teacher's name</th>
+			<th style="text-align:center">Whether to choose</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5201441</td>
+			<td>Software Testing</td>
+			<td>2017-2018 last semester</td>
+			<td>55 people</td>
+			<td>50485430</td>
+            <td>Bangalore</td>
+			<td style="text-align:center">
+        <div class="btn-group-vertical">
+	    <button type="button" class="btn btn-info" data-target="#myModal" data-toggle="modal">selected</button>
+        </div>
+             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            PROMPT
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                       Are you sure to choose this course£¿
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"data-dismiss="modal">cancel
+                        </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="javaScript:alert('Success!');">
+                           Confirm
+                        </button>
+                        
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+		    </td>
+		</tr>
+		<tr>
+			<td>57854565</td>
+			<td>Software Engineering</td>
+			<td>2017-2018 last semester</td>
+			<td>48 people</td>
+			<td>50485431</td>
+            <td>Mumbai</td>
+			<td style="text-align:center">
+                <div class="btn-group-vertical">
+	             <button type="button" class="btn btn-info">selected</button>
+                </div>
+		    </td>
+		</tr>
+		<tr>
+			<td>5024772</td>
+			<td>Software quality assurance</td>
+			<td>2017-2018 last semester</td>
+			<td>66 people</td>
+			<td>50485431</td>
+            <td>Hotton</td>
+			<td style="text-align:center">
+                <div class="btn-group-vertical">
+	             <button type="button" class="btn btn-info" >selected</button>
+                </div>
+		    </td>
+		</tr>
+	</tbody>
+</table>
+	</div>
+
+    <div class="tab-pane fade" id="display">
+
+		<div class="panel panel-default" style="margin-top:20px;">
+	<div class="panel-heading">
+		<h2 class="panel-title" style="color:#cc00cc;">student information</h2>
+	</div>
+	<table class="table">
+		<th>Name:</th> <td>Tina</td>
+         <th>Birth date:</th>   <td>1995-02-14</td>
+        <th>Age: </th>  <td>20</td>
+        <th>Ethnic:</th>   <td>Miao</td>
+
+		<tr>
+            <th>ID number</th>   <td>5002411895485412554</td>
+             <th>Provinces and cities counties:</th>   <td>HuNan Provinces and BaoJing City LiYe counties</td>
+            <th>student ID</th><td>05218851</td>
+            <th></th><td></td>
+        </tr>
+		<tr>
+            <th>family address:</th>   <td>HuNan Provinces and BaoJing City LiYe counties</td>
+            <th>Contact information:</th><td>099-379-3553</td>
+            <th></th><td></td>
+            <th></th><td></td>
+        </tr>
+          <tr>
+              <th>grade</th><td>Junior</td>
+            <th>class</th><td>Software Engineering 152 classes</td>
+                <th>profession</th><td>Software Engineering </td>
+            <th></th><td></td>
+        </tr>
+		<tr>
+           <th>Admission method</th><td>College entrance direct score admission</td>
+            <th>Academic situation</th><td>School is not bad, hands-on ability, full of creativity</td>
+                <th></th><td></td>
+            <th></th><td></td>
+        </tr>
+	</table>
+</div>
+	</div>
+    <div class="tab-pane fade" id="pay">
+        <table class="table table-bordered">
+		<caption style="margin-top:40px">>>Students need to pay tuition fees for course enrollment as follows:</caption>
+	<thead>
+		<tr>
+			<th>Course number</th>
+			<th>Course Title</th>
+            <th>Teacher's name</th>
+            <th>credit</th>
+            <th>cost</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5201441</td>
+			<td>Software Engineering</td>
+			<td>Bangalore</td>
+            <td>5</td>
+            <td>100 baht</td>
+		</tr>
+		<tr>
+			<td>5201478</td>
+			<td>Software Testing</td>
+			<td>Hotton</td>
+            <td>3</td>
+            <td>60 baht</td>
+		</tr>
+		<tr>
+			<td>5201452</td>
+			<td>Software Quelity</td>
+			<td>Tiinann</td>
+            <td>6</td>
+            <td>120 baht</td>
+		</tr>
+	</tbody>
+        </table>
+        <p style="margin-top:20px;font-size:20px;" >Total course fees:<span style="color:red;font-weight:bold;">280 baht</span></p>
+        <div class="btn-group-vertical" style="margin-top:10px">
+	             <button type="button" class="btn btn-info" onclick="javaScript:alert('payment successful!');">Confirm</button>
+                </div>
+        </div>
+	<div class="tab-pane fade" id="View">
+	<table class="table table-bordered" >
+	<caption style="margin-top:20px">>>Course selected</caption>
+	<thead>
+		<tr>
+			<th>Course number</th>
+			<th>Course Title</th>
+			<th>Open semester</th>
+            <th>Teacher's name</th>
+            <th>credit</th>
+			<th style="text-align:center">Status</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5201441</td>
+			<td>Software Testing</td>
+            <td>2017-2018 last semester</td>
+            <td>Bangalore</td>
+            <td>3</td>
+			<td style="text-align:center">
+        <div class="btn-group-vertical">
+	    <button type="button" class="btn btn-info" data-target="#myModal1" data-toggle="modal">Withdrawal</button>
+        </div>
+             <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel1">
+                            PROMPT
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                       Are you sure you want to quit this course?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"data-dismiss="modal">cancel
+                        </button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="javaScript:alert('Withdrawal is successful!');">
+                           Confirm
+                        </button>
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+
+		    </td>
+		</tr>
+		<tr>
+			<td>57854565</td>
+			<td>Software Engineering</td>
+            <td>2017-2018 last semester</td>
+            <td>Mumbai</td>
+            <td>5</td>
+			<td style="text-align:center">
+                <div class="btn-group-vertical">
+	             <button type="button" class="btn btn-info">Withdrawal</button>
+                </div>
+		    </td>
+		</tr>
+		<tr>
+			<td>5024772</td>
+			<td>Software quality assurance</td>
+            <td>2017-2018 last semester</td>
+            <td>Hotton</td>
+            <td>6</td>
+			<td style="text-align:center">
+                <div class="btn-group-vertical">
+	             <button type="button" class="btn btn-info" >Withdrawal</button>
+                </div>
+		    </td>
+		</tr>
+	</tbody>
+</table>
+	</div>
+
+    <div class="tab-pane fade" id="grade">
+		  <table class="table table-bordered">
+                  <div class="btn-group-vertical" style="margin-top:20px;">
+     <div class="form-group">
+	<select class="form-control" id="sel4">
+        <option disabled selected>Choose the school year</option>
+        <option>2017-2018</option>
+        <option>2016-2017</option>
+        <option>2015-2016</option>
+      </select></div>
+	</div>
+   <div class="btn-group-vertical" style="margin-top:20px; margin-left:10px;">
+     <div class="form-group">
+	<select class="form-control" id="sel5">
+        <option>Last semester</option>
+        <option>next semester</option>
+      </select></div>
+	</div>
+		<caption style="margin-top:20px">>>Student grade information:</caption>
+	<thead>
+		<tr>
+			<th>Course number</th>
+			<th>Course Title</th>
+            <th>Data</th>
+            <th>Credit</th>
+            <th>Grade</th>
+            <th>Comment</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>5201441</td>
+			<td>Software Engineering</td>
+            <td>2017-2018 last semester</td>
+            <td>5</td>
+            <td>A</td>
+            <td><a href="#" onclick="toggle('comment')">See details</a></td>
+		</tr>
+		<tr>
+			<td>5201478</td>
+			<td>Software Testing</td>
+            <td>2017-2018 last semester</td>
+            <td>3</td>
+            <td>B</td>
+             <td><a href="#" onclick="toggle('comment')">See details</a></td>
+		</tr>
+		<tr>
+			<td>5201452</td>
+			<td>Software Quelity</td>
+            <td>2017-2018 last semester</td>
+            <td>6</td>
+            <td>A</td>
+             <td><a href="#" onclick="toggle('comment')">See details</a></td>
+		</tr>
+	</tbody>
+        </table>
+        <p><h4>The student has a total of<span style="color:red;">13</span> credits</h4></p>
+        <p>All your GPA is <span style="color:red;">4.5</span></p>
+        <div class="panel panel-default"  id="comment" style="margin-top:50px;display:none;">
+    <div class="panel-heading">
+		<h2 class="panel-title" style="font-weight:bold;">
+			Teacher comment:
+		</h2>
+	</div>
+	<div class="panel-body">
+		The quality of the students is good, learning very hard, but usually lack of communication, hoping to strengthen later.
+        The quality of the students is good, learning very hard, but usually lack of communication, hoping to strengthen later.
+        The quality of the students is good, learning very hard, but usually lack of communication, hoping to strengthen later.
+        The quality of the students is good, learning very hard, but usually lack of communication, hoping to strengthen later.
+	</div>
+</div>
+	</div>
+</div>
+
+
+<script>
+   $(function () { $('#myModal').modal('hide')});
+</script>
+<script>
+   $(function () { $('#myModal1').modal('hide')});
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function toggle(targetid){
+    if (document.getElementById){
+        target=document.getElementById(targetid);
+            if (target.style.display=="block"){
+                target.style.display="none";
+            } else {
+                target.style.display="block";
+            }
+    }
+}
+-->
+</script>
+</body>
+</html>
