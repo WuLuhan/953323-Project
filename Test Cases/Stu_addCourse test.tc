@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This is a student add course test</description>
+   <name>Stu_addCourse test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f77ba2f8-d160-427e-954a-fd422d90e97d</testCaseGuid>
+</TestCaseEntity>
