@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CMU---CAMT</title>
+    <meta name="robots" content="all" />
+    <meta name="Identifier-URL" content="http://www.netgather.com" />
+    <link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="Bookmark" href="/favicon.ico" type="image/x-icon" />
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/webmain.css" rel="stylesheet" type="text/css" />
+    <link href="css/ddsmoothmenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.KinSlideshow-1.2.1.js"></script>
+    <script type="text/javascript" src="scripts/webtry_roll.js"></script>
+    <script type="text/javascript" src="scripts/ddsmoothmenu.js"></script>
+    <script type="text/javascript">
+        ddsmoothmenu.init({
+            mainmenuid: "MainMenu", //menu DIV id
+            orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+            classname: 'ddsmoothmenu', //class added to menu's outer DIV
+            //customtheme: ["#1c5a80", "#18374a"],
+            contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+        })
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <div class="top">
+        <img src="images/logo1.gif" width="210" height="94"/>
+        <img src="images/logo.gif" width="760" height="94" />
+    </div>
+    <div id="MainMenu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="index.html" title="home" id="menu_selected"><span>Home</span></a></li>
+            <li><a href="single.html" title="us"><span>Course Introduction</span></a>
+            <li><a href="news.html"><span>Course Information</span></a></li>
+            <li><a href="guestbook.html" title="Add course"><span>Add Course</span></a></li>
+            <li><a href="StuInfo.html" title="Add student"><span>add StuInfo</span></a></li>
+            <li><a href="TeaInfo.html" title="Add teacher"><span>add Teainfo</span></a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $("#banner").KinSlideshow({
+                moveStyle:"right",
+                titleBar:{titleBar_height:32,titleBar_bgColor:"#000",titleBar_alpha:0.7},
+                titleFont:{TitleFont_size:12,TitleFont_color:"#FFFFFF",TitleFont_weight:"normal"},
+                btn:{btn_bgColor:"#2d2d2d",btn_bgHoverColor:"#1072aa",btn_fontColor:"#FFF",btn_fontHoverColor:"#FFF",btn_borderColor:"#4a4a4a",btn_borderHoverColor:"#1188c0",btn_borderWidth:1}
+            });
+        })
+    </script>
+    <div id="banner">
+        <a href="#"><img src="images/120.jpg" alt="College of Arts, Media and Technology : CHIANG MAI UNIVERSIY" width="950" height="152" /></a>
+        <a href="#"><img src="images/121.jpg" alt="College of Arts, Media and Technology : CHIANG MAI UNIVERSIY" width="950" height="152" /></a>
+        <a href="#"><img src="images/122.jpg" alt="College of Arts, Media and Technology : CHIANG MAI UNIVERSIY" width="950" height="152" /></a>
+    </div>
+    <div id="page_main" class="clearfix">
+        <div class="page-right">
+
+            <div class="page-guestbook">
+                <script type="text/javascript">
+                    function check()
+                    {
+                        if(document.guestbook.Guest_Name.value=="")
+                        {
+                            alert("Please fill the course id");
+                            document.guestbook.Guest_Name.focus();
+                            return false
+                        }
+                        if(document.guestbook.Guest_Email.value=="")
+                        {
+                            alert("Please fill the course");
+                            document.guestbook.Guest_Email.focus();
+                            return false
+                        }
+                        if(document.guestbook.Content.value=="")
+                        {
+                            alert("Please fill the Teacher");
+                            document.guestbook.Content.focus();
+                            return false
+                        }
+                        if(document.guestbook.checkcode.value=="")
+                        {
+                            alert("Please fill the time");
+                            document.guestbook.checkcode.focus();
+                            return false
+                        }
+                        if(document.guestbook.checkcode.value=="")
+                        {
+                            alert("Please fill the address");
+                            document.guestbook.checkcode.focus();
+                            return false
+                        }
+                        if(document.guestbook.checkcode.value=="")
+                        {
+                            alert("Please fill the year");
+                            document.guestbook.checkcode.focus();
+                            return false
+                        }
+                        if(document.guestbook.checkcode.value=="")
+                        {
+                            alert("Please fill the credit");
+                            document.guestbook.checkcode.focus();
+                            return false
+                        }
+                        //var re = /^[0-9]+.?[0-9]*$/;//判断字符串是否为数字
+                        var re = /^[1-9]+[0-9]*]*$/;//判断字符串是否为正整数
+                        return true;
+                    }
+                </script>
+                <form method="post" name="guestbook" id="guestbook" onSubmit="return check()">
+                    <dl class="clearfix">
+                        <dt>Course id：</dt>
+                        <dd><input name="Guest_Name" type="text" id="Guest_Name" /><span>*</span></dd>
+                        <dt>Course：</dt>
+                        <dd><input name="Guest_Email" type="text" id="Guest_Email" /><span>*</span></dd>
+                        <dt>Teacher：</dt>
+                        <dd><input name="Guest_TEL" type="text" id="Guest_TEL" /></dd>
+                        <dt>Time：</dt>
+                        <dd><input name="Guest_FAX" type="text" id="Guest_FAX" /></dd>
+                        <dt>Address：</dt>
+                        <dd><input name="Guest_ADD" type="text" id="Guest_ADD" /></dd>
+                        <dt>Year：</dt>
+                        <dd><input name="Guest_ZIP" type="text" id="Guest_ZIP" /></dd>
+                        <dt>Credit：</dt>
+                        <dd><input name="Guest_ZIP" type="text" id="Guest_ZIP" /></dd>
+
+
+                    </dl>
+                    <p >
+                        <input name="submit" type="submit" id="submit" value="submit" align="left"/>
+                        <input name="reset" type="submit" id="reset" value="reset" />
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="page-left">
+            <div class="left-search">
+                <h2><span>Search</span></h2>
+                <form action="" method="post" id="sitesearch" name="sitesearch">
+                    <p>
+                        <select name="searchid" id="searchid"><option value="2">....</option><option value="3">.....</option><option value="4">....</option></select>
+                    </p>
+                    <p>
+                        <input name="searchtext" type="text" id="searchtext"/>
+                    </p>
+                    <p>
+                        <input name="searchbutton" type="submit" id="searchbutton" value="" />
+                    </p>
+                </form>
+            </div>
+            <div class="index-contact">
+                <h2><span>Contact us</span></h2>
+                <p><span>Address: </span>ChaingMai university<br />
+                    <span>Zip code: </span>200000<br />
+                    <span>Contact: </span>Hutton<br />
+                    <span>Phone: </span>021-58888888<br />
+                    <span>Fax: </span>021-58888888<br />
+                    <span>mobile: </span>13888888888<br />
+                    <span>E-main: </span>Mrzhenggbmd@163.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
