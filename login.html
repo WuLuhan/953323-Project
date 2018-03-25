@@ -21,13 +21,16 @@
                     <br /><br />
                     <a href="register.html" id="a3">register</a>
                     <br /><br />
-                    <a href="stu_main.html" onclick="login();"><input type="submit" id="btn" value="login" /> </a>
+                    <div id="type">
+                        <input type="radio" name="Identity" value="administrator" onclick="getValue(this)">administrator
+                        <input type="radio" name="Identity" value="teacher" onclick="getValue(this)" >teacher
+                        <input type="radio" name="Identity" value="student" onclick="getValue(this)"> student
+                    </div>
+                  <input type="submit" id="btn" value="login" onclick="getType()"/>
                 </div>
                 <div id="bot">
                  <form id="loginfrom" method="post">
-                <input type="radio" name="Identity" value="administrator" onclick="getValue(this)">administrator
-                <input type="radio" name="Identity" value="teacher">teacher
-                <input type="radio" name="Identity" value="student">student
+
                 </form>
                 </div>
             </div>
@@ -46,10 +49,23 @@
             <div id="link">Copyright © 2004-2017  CAMT All rights reserved</div>
         </div>
    <script type="text/javascript">
-          function getValue(obj){
-              var Identity =obj.value;
-              alert(value);
+       function getValue(obj){
+           // method 2
+           var admin="administrator";
+           var teach="teacher";
+           var stu = "student";
+           var value = obj.value;
+          if(value==admin){
+              var t=setTimeout("window.location.href=\"index.html\"",1000);
           }
+           else if(value==teach){
+               var t=setTimeout("window.location.href=\"t-index.html\"",1000);
+           }
+           else{
+               var t=setTimeout("window.location.href=\"stu_main.html\"",1000);
+           }
+       }
+
    </script>
     </body>
 </html>
