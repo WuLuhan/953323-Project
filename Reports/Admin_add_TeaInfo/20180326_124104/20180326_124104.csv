@@ -1,0 +1,5 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+Admin_add_TeaInfo,,,2018-03-26 12:41:20,2018-03-26 12:41:29,8.987s,FAILED
+,,,,,,
+Test Cases/Admin_add_TeaInfo,,,2018-03-26 12:41:22,2018-03-26 12:41:29,6.572s,FAILED
+openBrowser,,,2018-03-26 12:41:24,2018-03-26 12:41:29,4.686s,FAILED
