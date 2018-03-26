@@ -1,0 +1,9 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+student pay tuition,Chrome 65.0.3325.162,,2018-03-26 13:38:23,2018-03-26 13:38:33,10.607s,PASSED
+,,,,,,
+Test Cases/Stu_payTuition test,Chrome 65.0.3325.162,,2018-03-26 13:38:23,2018-03-26 13:38:33,10.041s,PASSED
+openBrowser,Chrome 65.0.3325.162,,2018-03-26 13:38:23,2018-03-26 13:38:29,5.581s,PASSED
+navigateToUrl,Chrome 65.0.3325.162,,2018-03-26 13:38:29,2018-03-26 13:38:31,2.119s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:38:31,2018-03-26 13:38:32,0.465s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:38:32,2018-03-26 13:38:32,0.238s,PASSED
+closeBrowser,Chrome 65.0.3325.162,,2018-03-26 13:38:32,2018-03-26 13:38:33,1.205s,PASSED

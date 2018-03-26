@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+student view announcements,Chrome 65.0.3325.162,,2018-03-26 13:37:43,2018-03-26 13:37:54,11.472s,PASSED
+,,,,,,
+Test Cases/Stu_browseAnnouncements test,Chrome 65.0.3325.162,,2018-03-26 13:37:43,2018-03-26 13:37:54,10.975s,PASSED
+openBrowser,Chrome 65.0.3325.162,,2018-03-26 13:37:44,2018-03-26 13:37:49,5.674s,PASSED
+navigateToUrl,Chrome 65.0.3325.162,,2018-03-26 13:37:49,2018-03-26 13:37:52,2.640s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:52,2018-03-26 13:37:52,0.365s,PASSED
+switchToWindowTitle,Chrome 65.0.3325.162,,2018-03-26 13:37:52,2018-03-26 13:37:52,0.069s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:52,2018-03-26 13:37:53,0.309s,PASSED
+closeBrowser,Chrome 65.0.3325.162,,2018-03-26 13:37:53,2018-03-26 13:37:54,1.487s,PASSED

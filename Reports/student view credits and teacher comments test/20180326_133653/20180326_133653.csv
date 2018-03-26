@@ -1,0 +1,11 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+student view credits and teacher comments test,Chrome 65.0.3325.162,,2018-03-26 13:36:55,2018-03-26 13:37:06,11.342s,PASSED
+,,,,,,
+Test Cases/Stu_viewCreditsAndTeacherComments test,Chrome 65.0.3325.162,,2018-03-26 13:36:55,2018-03-26 13:37:06,10.819s,PASSED
+openBrowser,Chrome 65.0.3325.162,,2018-03-26 13:36:56,2018-03-26 13:37:02,6.275s,PASSED
+navigateToUrl,Chrome 65.0.3325.162,,2018-03-26 13:37:02,2018-03-26 13:37:04,1.705s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:04,2018-03-26 13:37:04,0.348s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:04,2018-03-26 13:37:04,0.286s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:04,2018-03-26 13:37:05,0.326s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-26 13:37:05,2018-03-26 13:37:05,0.221s,PASSED
+closeBrowser,Chrome 65.0.3325.162,,2018-03-26 13:37:05,2018-03-26 13:37:06,1.220s,PASSED
