@@ -1,0 +1,9 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+t-select-student,Chrome 65.0.3325.162,,2018-03-28 17:38:22,2018-03-28 17:38:32,10.510s,PASSED
+,,,,,,
+Test Cases/t-select-student,Chrome 65.0.3325.162,,2018-03-28 17:38:22,2018-03-28 17:38:32,9.935s,PASSED
+openBrowser,Chrome 65.0.3325.162,,2018-03-28 17:38:23,2018-03-28 17:38:28,5.577s,PASSED
+navigateToUrl,Chrome 65.0.3325.162,,2018-03-28 17:38:28,2018-03-28 17:38:30,1.880s,PASSED
+setText,Chrome 65.0.3325.162,,2018-03-28 17:38:30,2018-03-28 17:38:31,0.313s,PASSED
+click,Chrome 65.0.3325.162,,2018-03-28 17:38:31,2018-03-28 17:38:31,0.138s,PASSED
+closeBrowser,Chrome 65.0.3325.162,,2018-03-28 17:38:31,2018-03-28 17:38:32,1.578s,PASSED
