@@ -25,9 +25,6 @@
                 </div>
                 <div id="bot">
                  <form id="loginfrom" method="post">
-                     <input type="radio" name="Identity" value="administrator" onclick="getValue(this)">administrator
-                     <input type="radio" name="Identity" value="teacher" onclick="getValue(this)" >teacher
-                     <input type="radio" name="Identity" value="student" onclick="getValue(this)"> student
                 </form>
                 </div>
             </div>
@@ -46,22 +43,6 @@
             <div id="link">Copyright © 2004-2017  CAMT All rights reserved</div>
         </div>
    <script type="text/javascript">
-       function getValue(obj){
-           // method 2
-           var admin="administrator";
-           var teach="teacher";
-           var stu = "student";
-           var value = obj.value;
-          if(value==admin){
-              var t=setTimeout("window.location.href=\"index.html\"",1000);
-          }
-           else if(value==teach){
-               var t=setTimeout("window.location.href=\"t-index.html\"",1000);
-           }
-           else{
-               var t=setTimeout("window.location.href=\"stu_main.html\"",1000);
-           }
-       }
 
    </script>
     </body>
