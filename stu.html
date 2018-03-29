@@ -1,0 +1,70 @@
+<html>
+	<head>
+    	<meta charset="utf-8" />
+    	<title>Welcome to CAMT</title>       
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+    </head>
+    <body>
+    	<div id="top">
+        	<img id="logo" src="image/logo.jpg" />
+        </div>
+        
+        <div id="content">
+        	<div id="login">
+            	<div id="change">
+                    <a href="" id="a1">Scan code</a>
+                    <a href="" id="a2">student login</a>
+                </div>
+                <div style="margin-top:35px;">
+				<form action="" id="loginform" method="post"name="login"onsubmit="return checkform();">
+                    username：<input id="username" type="text" name="username" /><br /><br />
+                    password：<input id="password" type="password" name="password" />
+                    <br /><br />
+                    <a href="register.html" id="a3">register</a>
+                    <br /><br />
+                  <input type="submit" id="btn" value="login" />
+				  </form>
+				  <script type="text/javascript">
+              function checkform()
+				{
+				if(document.getElementById('username').value=='')
+				{
+				alert('The username can not be empty！');
+				return false;
+				}
+				if(document.getElementById('password').value=='')
+				{
+				alert('The password can not be empty！');
+				return false;
+				}
+				if(document.getElementById('username').value=='Tina' && document.getElementById('password').value=='111111')
+					{
+					window.open('stu_main.html');   
+					}
+					else{
+					  alert('The identity of the input is wrong！！');
+					}
+				}
+   </script>
+                </div>
+                <div id="bot">
+				 <form id="loginfrom" method="post">
+                </form>
+                </div>
+            </div>
+        </div>
+        
+        <div id="bottom">
+        	<div id="link">
+            	<a href="">about us</a> | 
+                <a href="">contact us</a> |
+                <a href="">Recruitment</a> |
+                <a href="">Links</a> |
+                <a href="">Public community</a> |
+                <a href="">College of public welfare</a> |
+                <a href="">English Site</a>
+            </div>
+            <div id="link">Copyright © 2004-2017  CAMT All rights reserved</div>
+        </div>
+    </body>
+</html>
