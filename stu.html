@@ -16,7 +16,7 @@
                     <a href="" id="a2">student login</a>
                 </div>
                 <div style="margin-top:35px;">
-				<form action="" id="loginform" method="post"name="login"onsubmit="return checkform();">
+				<form action="" id="loginform" method="post" target="_self" name="login"onsubmit="return checkform();">
                     username：<input id="username" type="text" name="username" /><br /><br />
                     password：<input id="password" type="password" name="password" />
                     <br /><br />
@@ -32,14 +32,14 @@
 				alert('The username can not be empty！');
 				return false;
 				}
-				if(document.getElementById('password').value=='')
+				else if(document.getElementById('password').value=='')
 				{
 				alert('The password can not be empty！');
 				return false;
 				}
-				if(document.getElementById('username').value=='Tina' && document.getElementById('password').value=='111111')
+				else if(document.getElementById('username').value=='Tina' && document.getElementById('password').value=='111111')
 					{
-					window.open('stu_main.html');   
+					window.open('stu_main.html');
 					}
 					else{
 					  alert('The identity of the input is wrong！！');
