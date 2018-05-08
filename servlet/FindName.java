@@ -1,4 +1,4 @@
-package com.bfmz.servlet;
+package com.bfmz.servlet1;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bfmz.dao.partworkDao;
-import com.bfmz.entity.partwork;
+import com.bfmz.dao.QiyeDao;
+import com.bfmz.entity.Qiye;
 
 
-public class FindName extends HttpServlet {
+public class EFindName extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
@@ -22,10 +22,10 @@ public class FindName extends HttpServlet {
 		String keyWord=request.getParameter("word");
 		System.out.println("keyword="+keyWord);
 		
-		partworkDao dao = new partworkDao();
-		List<partwork> list= dao.findPartByName(keyWord);
+		QiyeDao dao = new QiyeDao();
+		List<Qiye> list= dao.findQiyeByName(keyWord);
 		request.setAttribute("message", list);
-		request.getRequestDispatcher("delete.jsp").forward(request, response);
+		request.getRequestDispatcher("edelete.jsp").forward(request, response);
 		
 	}
 

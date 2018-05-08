@@ -1,4 +1,4 @@
-package com.bfmz.servlet;
+package com.bfmz.servlet1;
 
 import java.io.IOException;
 
@@ -7,10 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bfmz.dao.partworkDao;
-import com.bfmz.entity.partwork;
+import com.bfmz.dao.QiyeDao;
+import com.bfmz.entity.Qiye;
 
-public class UpdateInfo extends HttpServlet {
+public class EUpdateInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
@@ -18,13 +18,13 @@ public class UpdateInfo extends HttpServlet {
 		
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
-		int id=Integer.parseInt(request.getParameter("id")) ;
+		int id=Integer.parseInt(request.getParameter("eId")) ;
 		
-		partworkDao dao=new partworkDao();
-		partwork stu=dao.getPartInfoById(id);
+		QiyeDao dao=new QiyeDao();
+		Qiye stu=dao.getQiyeInfoById(id);
 		
 		request.setAttribute("message",stu);
-		request.getRequestDispatcher("updateInfo.jsp").forward(request, response);
+		request.getRequestDispatcher("eupdateInfo.jsp").forward(request, response);
 		
 	}
 

@@ -1,4 +1,4 @@
-package com.bfmz.servlet;
+package com.bfmz.servlet1;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bfmz.dao.partworkDao;
-import com.bfmz.entity.partwork;
+import com.bfmz.dao.QiyeDao;
+import com.bfmz.entity.Qiye;
 
 
 /**
@@ -18,17 +18,17 @@ import com.bfmz.entity.partwork;
  * @author
  *
  */
-public class ToDeleteJsp extends HttpServlet {
+public class EToDeleteJsp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("utf-8");
 		request.setCharacterEncoding("utf-8");
 		
-		partworkDao dao=new partworkDao();
-		List<partwork> list=dao.getPartwork();
+		QiyeDao dao=new QiyeDao();
+		List<Qiye> list=dao.getQiye();
 		request.setAttribute("message", list);
-		request.getRequestDispatcher("delete.jsp").forward(request, response);
+		request.getRequestDispatcher("edelete.jsp").forward(request, response);
 		
 	}
 
