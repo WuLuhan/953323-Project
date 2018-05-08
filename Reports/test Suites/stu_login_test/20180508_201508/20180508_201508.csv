@@ -1,0 +1,13 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+stu_login_test,Chrome 65.0.3325.162,,2018-05-08 20:15:11,2018-05-08 20:15:36,24.924s,PASSED
+,,,,,,
+Test Cases/now test/stu_login test,Chrome 65.0.3325.162,,2018-05-08 20:15:12,2018-05-08 20:15:36,24.066s,PASSED
+openBrowser,Chrome 65.0.3325.162,,2018-05-08 20:15:12,2018-05-08 20:15:21,8.655s,PASSED
+navigateToUrl,Chrome 65.0.3325.162,,2018-05-08 20:15:21,2018-05-08 20:15:31,10.425s,PASSED
+click,Chrome 65.0.3325.162,,2018-05-08 20:15:31,2018-05-08 20:15:33,2.027s,PASSED
+setText,Chrome 65.0.3325.162,,2018-05-08 20:15:33,2018-05-08 20:15:33,0.257s,PASSED
+setText,Chrome 65.0.3325.162,,2018-05-08 20:15:33,2018-05-08 20:15:34,0.178s,PASSED
+click,Chrome 65.0.3325.162,,2018-05-08 20:15:34,2018-05-08 20:15:34,0.542s,PASSED
+Statement - url = com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.getUrl(),Chrome 65.0.3325.162,,2018-05-08 20:15:34,2018-05-08 20:15:34,0.050s,PASSED
+verifyMatch,Chrome 65.0.3325.162,,2018-05-08 20:15:34,2018-05-08 20:15:34,0.065s,PASSED
+closeBrowser,Chrome 65.0.3325.162,,2018-05-08 20:15:34,2018-05-08 20:15:36,1.352s,PASSED
