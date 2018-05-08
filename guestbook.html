@@ -129,9 +129,15 @@
 
                     </dl>
                     <p >
-                        <input name="submit" type="submit" id="submit" value="submit" align="left"/>
+                        <input name="submit" type="submit" id="submit" value="submit" onclick="Del()" align="left"/>
                         <input name="reset" type="submit" id="reset" value="reset" />
                     </p>
+                    <script language="javascript">
+                        function Del()
+                        {
+                            alert("Are you sure?");
+                        }
+                    </script>
                 </form>
             </div>
         </div>
@@ -149,6 +155,7 @@
                         <input name="searchbutton" type="submit" id="searchbutton" value="" />
                     </p>
                 </form>
+
             </div>
             <div class="index-contact">
                 <h2><span>Contact us</span></h2>

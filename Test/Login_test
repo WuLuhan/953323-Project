@@ -1,0 +1,27 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.junit.After;    
+import org.junit.Test;  
+
+import com.bfmz.servlet.Login;
+  
+public class Test_juint {  
+      
+    @Test  
+    public void doGet(){  
+          
+    	Login ts=new Login();  
+		ts.equals(null);
+    }  
+      
+    @After  
+    public void doPost(){  
+    	Login ts=new Login();  
+		ts.equals(null);
+    }   
+    }  
+  

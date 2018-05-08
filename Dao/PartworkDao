@@ -1,0 +1,343 @@
+package com.bfmz.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bfmz.entity.partwork;
+import com.bfmz.utils.BaseDao;
+import com.bfmz.entity.student;
+public class partworkDao {
+	Connection con=null;
+	PreparedStatement ps=null;
+	ResultSet rs=null;
+	
+	/**
+	 * 登录验证
+	 * @return
+	 */
+	public boolean loginstu(String studentNum,String pass) {
+		
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select passWord from student where studentNo=?");
+			ps.setString(1, studentNum);
+			rs= ps.executeQuery();
+			//取出查询到的密码进行对比
+			while(rs.next()) {
+				if(pass.equals(rs.getString("passWord"))) {
+					return true;
+				}
+			}
+			return false;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			//关闭数据库资源
+			BaseDao.close(con, ps, rs);
+		}
+		return false;
+		
+		
+	}
+public boolean loginpart(String eno,String pass) {
+		
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select password from enterprise where eno=?");
+			ps.setString(1, eno);
+			rs= ps.executeQuery();
+			//取出查询到的密码进行对比
+			while(rs.next()) {
+				if(pass.equals(rs.getString("password"))) {
+					return true;
+				}
+			}
+			return false;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			//关闭数据库资源
+			BaseDao.close(con, ps, rs);
+		}
+		return false;
+		
+		
+	}
+	/**
+	 * 获取所有学生信息
+	 * @return
+	 */
+	public List<partwork> getPartwork(){
+		List<partwork> list=new ArrayList<partwork>();
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select * from partwork ");
+			rs= ps.executeQuery();
+			//遍历，把拿到的数据库信息存到List<partwork> 中
+			while(rs.next()) {
+					partwork stu=new partwork();
+					stu.setCourseNum(rs.getString(1));
+					
+					stu.setCourseName(rs.getString(2));
+					stu.setCourseId(rs.getString(3));
+					stu.setSemester(rs.getString(4));
+					stu.setSchoolYear(rs.getString(5));
+					stu.setMaxNumber(rs.getString(6));
+					System.out.println(stu);
+					list.add(stu);
+				}
+			
+			}catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}finally {
+				BaseDao.close(con, ps, rs);
+			}
+		return list;
+	}
+	public List<partwork> getPspartwork(String pno){
+		List<partwork> list=new ArrayList<partwork>();
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select * from partwork where courseNum in(select courseNum from pstudent where studentNo='"+pno+"')");
+			rs= ps.executeQuery();
+			//遍历，把拿到的数据库信息存到List<partwork> 中
+			while(rs.next()) {
+					partwork stu=new partwork();
+					stu.setCourseNum(rs.getString(1));
+					
+					stu.setCourseName(rs.getString(2));
+					stu.setCourseId(rs.getString(3));
+					stu.setSemester(rs.getString(4));
+					stu.setSchoolYear(rs.getString(5));
+					stu.setMaxNumber(rs.getString(6));
+					System.out.println(stu);
+					list.add(stu);
+				}
+			
+			}catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}finally {
+				BaseDao.close(con, ps, rs);
+			}
+		return list;
+	}
+	
+	/**
+	 * 保存学生信息
+	 * @param stu
+	 */
+	
+	public void save(partwork stu) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("insert into partwork(courseNum,courseName,courseId,semester,schoolYear,maxNumber) values(?,?,?,?,?,?) ");
+			ps.setString(1, stu.getCourseNum());
+			ps.setString(2, stu.getCourseName());
+			ps.setString(3, stu.getCourseId());
+			ps.setString(4, stu.getSemester());
+			ps.setString(5, stu.getSchoolYear());
+			ps.setString(6, stu.getMaxNumber());
+			ps.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+	
+	}
+	public void ssave(student stu) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("insert into student(studentNo,passWord,studentName,sex) values(?,?,?,?) ");
+			ps.setString(1, stu.getStudentNo());
+			ps.setString(2, stu.getStudentNo());
+			ps.setString(3, stu.getStudentName());
+			ps.setString(4, stu.getSex());
+			ps.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+	
+	}
+	/**
+	 * 根据id 删除学生信息
+	 */
+	
+	public void deleteOne(int id) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("delete from partwork where courseNum=? ");
+			ps.setInt(1, id);
+			
+			ps.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+	}
+	public void pdeleteOne(int courseNum,String pno) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("delete from pstudent where courseNum=? and studentNo=?");
+			ps.setInt(1, courseNum);
+			ps.setString(2, pno);
+			ps.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+	}
+	
+	public void selectOne(int id,String pno) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("insert into pstudent values(?,?) ");
+			ps.setInt(1, id);
+			ps.setString(2,pno);
+			ps.execute();
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+	}
+	
+	//根据学生姓名获取学生信息，可以模糊查询，比如可以查询姓相同的信息
+	public List<partwork> findPartByName(String name) {
+		List<partwork> list=new ArrayList<partwork>();
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select * from partwork where courseName like ?");
+			ps.setString(1,"%"+name+"%");
+			
+			rs=ps.executeQuery();
+			
+			while(rs.next()) {
+				partwork stu=new partwork();
+				stu.setCourseNum(rs.getString(1));
+				
+				stu.setCourseName(rs.getString(2));
+				stu.setCourseId(rs.getString(3));
+				stu.setSemester(rs.getString(4));
+				stu.setSchoolYear(rs.getString(5));
+				stu.setMaxNumber(rs.getString(6));
+				System.out.println(stu);
+				list.add(stu);
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+		return list;
+	}
+	
+	//根据学生ID获取学生信息
+	
+	public partwork getPartInfoById(int id) {
+		partwork stu=new partwork();
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("select * from partwork where courseNum=?");
+			ps.setInt(1,id);
+			
+			rs=ps.executeQuery();
+			
+			while(rs.next()) {
+               stu.setCourseNum(rs.getString(1));
+				stu.setCourseName(rs.getString(2));
+				stu.setCourseId(rs.getString(3));
+				stu.setSemester(rs.getString(4));
+				stu.setSchoolYear(rs.getString(5));
+				stu.setMaxNumber(rs.getString(6));
+				
+				
+				
+			}
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+		return stu;
+	}
+	
+	
+	//根据id修改学生信息
+	
+	public void updatePartInfo(partwork stu) {
+		try {
+			con=BaseDao.getCon();
+			ps= con.prepareStatement("update partwork set courseName=?,courseId=?,schoolYear=?,semester=?,maxNumber=? where courseNum=?");
+
+			ps.setString(1, stu.getCourseName());
+			ps.setString(2, stu.getCourseId());
+			ps.setString(3, stu.getSemester());
+			ps.setString(4, stu.getSchoolYear());
+			ps.setString(5, stu.getMaxNumber());
+			ps.setString(6,(stu.getCourseNum()) );
+			ps.execute();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			BaseDao.close(con, ps, rs);
+		}
+		
+	}
+	
+}
