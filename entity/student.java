@@ -1,40 +1,71 @@
-package com.bfmz.entity;
+package com.qinzz.edu.entity;
 
-public class student {
-	private int id;
-	private String  studentNo;
-	private String passWord;
-	private String  studentName;
-	private String  sex;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getStudentNo() {
-		return studentNo;
-	}
-	public void setStudentNo(String studentNo) {
-		this.studentNo = studentNo;
-	}
-	public String getPassWord() {
-		return passWord;
-	}
-	public void setPassWord(String passWord) {
-		this.passWord = passWord;
-	}
+
+public class Student{
+	public String studentName;
+	public String studentId;
+	public int studentAge;
+	public String studentNation;
+	public String studentClass;
+	public String studentMajor;
+	public String studentCollege;
+	public int studentIDcard;
+	public String studentAddress;
+	
 	public String getStudentName() {
 		return studentName;
 	}
 	public void setStudentName(String studentName) {
 		this.studentName = studentName;
 	}
-	public String getSex() {
-		return sex;
+	public String getStudentId() {
+		return studentId;
 	}
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
 	}
+	public int getStudentAge() {
+		return studentAge;
+	}
+	public void setStudentAge(int studentAge) {
+		this.studentAge = studentAge;
+	}
+	public String getStudentNation() {
+		return studentNation;
+	}
+	public void setStudentNation(String studentNation) {
+		this.studentNation = studentNation;
+	}
+	public String getStudentClass() {
+		return studentClass;
+	}
+	public void setStudentClass(String studentClass) {
+		this.studentClass = studentClass;
+	}
+	public String getStudentMajor() {
+		return studentMajor;
+	}
+	public void setStudentMajor(String studentMajor) {
+		this.studentMajor = studentMajor;
+	}
+	public String getStudentCollege() {
+		return studentCollege;
+	}
+	public void setStudentCollege(String studentCollege) {
+		this.studentCollege = studentCollege;
+	}
+	public int getStudentIDcard() {
+		return studentIDcard;
+	}
+	public void setStudentIDcard(int studentIDcard) {
+		this.studentIDcard = studentIDcard;
+	}
+	public String getStudentAddress() {
+		return studentAddress;
+	}
+	public void setStudentAddress(String studentAddress) {
+		this.studentAddress = studentAddress;
+	}
+	
 	
 }
