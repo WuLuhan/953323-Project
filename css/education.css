@@ -3,9 +3,11 @@
 /* Padding below the footer and lighter body text */
 
 body {
+    height:400px;
+    width:100%;
     padding-bottom: 3rem;
     color: #5a5a5a;
-    background:url(../image/bg3.JPG)  repeat;
+    background:url(../image/bg3.JPG)  repeat-x;
 }
 
 #main1{
@@ -69,7 +71,7 @@ body {
     }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 300px) {
     .featurette-heading {
         margin-top: 7rem;
     }
