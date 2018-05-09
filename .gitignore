@@ -3,3 +3,8 @@
 /.settings/
 /.classpath
 .svn/
+*.html
+add.html
+add.html
+update.html
+.idea/misc.xml
